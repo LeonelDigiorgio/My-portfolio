@@ -1,0 +1,93 @@
+:root {
+    --bg-color: #fff;
+    --text-color: #333;
+    --link-color: #0077cc;
+}
+
+.dark-mode {
+    --bg-color: #333;
+    --text-color: #fff;
+    --link-color: #66aaff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilos para el header */
+header {
+    display: flex;                /* Usamos Flexbox */
+    justify-content: space-between; /* Esto alinea los elementos extremos (h1 a la izquierda, nav a la derecha) */
+    align-items: center;           /* Alinea los items verticalmente al centro */
+    padding: 10px 20px;            /* Espaciado interior */
+}
+/* Alineación de h1 a la izquierda */
+header h1 {
+    margin: 0;                     /* Eliminar márgenes por defecto */
+}
+/* Estilos para el nav */
+nav {
+    display: flex;                   /* Usamos Flexbox en el nav también */
+}
+
+nav ul {
+    display: flex;                   /* Lista en línea */
+    margin: 0;                        /* Eliminar margen por defecto */
+    padding: 0;                       /* Eliminar padding por defecto */
+    list-style: none;                 /* Eliminar los puntos de la lista */
+}
+
+nav li {
+    margin-left: 20px;               /* Espaciado entre los items */
+}
+
+nav a, nav button {
+    text-decoration: none;           /* Eliminar subrayado en los links */
+    color: inherit;                  /* Hereda el color del texto */
+    background: none;                /* Eliminar el fondo de los botones */
+    border: none;                    /* Eliminar borde de los botones */
+    cursor: pointer;                 /* Cambiar el cursor a mano */
+    font-size: 16px;                  /* Tamaño de fuente de los botones */
+}
+
+/* Si es necesario, agregar efectos adicionales al pasar el mouse */
+nav a:hover, nav button:hover {
+    color: #005fa3;                  /* Cambia el color al pasar el mouse */
+}
+
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-color);
+}
+
+button {
+    background-color: var(--link-color);
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005fa3;
+}
+
+.hidden {
+    display: none;
+    transition: opacity 0.3s ease;
+}
+#certificado1, #certificado2, #certificado3, #certificado4 {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+#certificado1:not(.hidden), #certificado2:not(.hidden), #certificado3:not(.hidden), #certificado4:not(.hidden) {
+    opacity: 1;
+}

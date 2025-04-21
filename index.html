@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <!-- seccion navegador (inicio, sobre mi, formacion, proyectos, contacto, english/español, modo claro/oscuro) -->
+    <header>
+        <h1>Leo</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#formacion">Formacion</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><button id="idioma">English/Español</button></li>
+                <li><button id="modo-oscuro">ModoClaro/ModoOscuro</button></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- seccion inicio  bienvenidos a mi portfolio! -->
+    <section id="inicio">
+        <h2>¡Bienvenido a mi portfolio!</h2>
+        <p> FRONTEND DEVELOPER.</p>
+        <p>Desarrollador Web de Rosario, Santa Fe, Argentina. Me especializo en desarrollo Front-end,
+            con experiencia en la creación de interfaces de usuario eficientes y visualmente atractivas.</p>
+    </section>
+    <!-- seccion sobre mi. descripcion mia / link a cv /   -->
+    <section id="sobre-mi">
+        <h2>Sobre mí</h2>
+        <p>¡Hola! Soy Leo, desarrollador Front End con un toque creativo. Me dedico a diseñar interfaces atractivas y
+            funcionales
+            que mejoren la experiencia de usuario. Disfruto trabajar en equipo, compartir ideas y aprender continuamente
+            para llevar cada proyecto
+            al siguiente nivel. Gracias por tomarte el tiempo de leer sobre mí. ¡Espero que pronto podamos trabajar
+            juntos y crear soluciones
+            memorables!</p>
+        <h2>A continuación te dejo mi link de LinkedIn para que puedas conocer más sobre mi trayectoria.</h2>
+        <p>Ahi encontrarás detalles acerca de mi formación, proyectos en los que he trabajado y habilidades que he
+            desarrollado.</p>
+    </section>
+    <!-- seccion formacion -->
+    <section id="formacion">
+        <h2>Certificaciones</h2>
+        <p>En esta sección podrás ver mi formación académica y profesional, así como un panorama de mis conocimientos en
+            diferentes tecnologías.</p>
+        <h3>Selecciona una de mis certificaciones para verla en detalle:</h3>
+        <ul>
+            <li><button onclick="mostrarCertificado(1)">certificacion 1</button>
+                <div id="certificado1" class="hidden">
+                    <img src="certificado1.jpg" alt="Certificado 1">
+                </div>
+            </li>
+            <li><button onclick="mostrarCertificado(2)">certificacion 2</button>
+                <div id="certificado2" class="hidden">
+                    <img src="certificado2.jpg" alt="Certificado 2">
+                </div>
+            </li>
+            <li><button onclick="mostrarCertificado(3)">certificacion 3</button>
+                <div id="certificado3" class="hidden">
+                    <img src="certificado3.jpg" alt="Certificado 3">
+                </div>
+            </li>
+            <li><button onclick="mostrarCertificado(4)">certificacion 4</button>
+                <div id="certificado4" class="hidden">
+                    <img src="certificado4.jpg" alt="Certificado 4">
+                </div>
+            </li>
+        </ul>
+    </section>
+    <!-- seccion proyectos -->
+    <section id="proyectos">
+        <h2>Proyectos</h2>
+        <p>Acá irán tus proyectos destacados con links o imágenes.</p>
+        <a href=""></a><!-- proyecto 1 -->
+        <a href=""></a><!-- proyecto 2 -->
+        <a href=""></a><!-- proyecto 3 -->
+    </section>
+    <!-- seccion contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Puedes contactarme en: <a href="mailto:tuemail@example.com">tuemail@example.com</a></p>
+    </section>
+    <!-- seccion footer -->
+    <footer>
+        <p>&copy; 2025 Leo | <a href="https://www.linkedin.com/in/tu-linkedin" target="_blank">LinkedIn</a> | <a
+                href="https://github.com/tu-github" target="_blank">GitHub</a></p>
+    </footer>
+</body>
+<script src="index1.js"></script>
+</html>
