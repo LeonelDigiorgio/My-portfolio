@@ -5,12 +5,15 @@ function mostrarCertificado(num) {
     certificado.classList.toggle('hidden');
 }
 
+
 // Este código agrega o elimina la clase 'dark-mode' del body cada vez que se hace clic en el botón,
 // lo que cambiará los estilos definidos en CSS y también cambia el texto del botón.
 const modoOscuroButton = document.querySelector('#modo-oscuro');
 
+
 const modoClaroText = "Modo Claro";
 const modoOscuroText = "Modo Oscuro";
+
 
 // Usamos un solo event listener para manejar ambos cambios: el de clase y el de texto.
 modoOscuroButton.addEventListener('click', () => {

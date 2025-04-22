@@ -1,12 +1,12 @@
 :root {
-    --bg-color: #fff;
+    --bg-color: #d6d4d4;
     --text-color: #333;
     --link-color: #0077cc;
 }
 
 .dark-mode {
     --bg-color: #333;
-    --text-color: #fff;
+    --text-color: #d6d4d4;
     --link-color: #66aaff;
 }
 
