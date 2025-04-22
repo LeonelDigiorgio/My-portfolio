@@ -4,33 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio de Leo - Frontend Developer</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
     <!-- seccion navegador (inicio, sobre mi, formacion, proyectos, contacto, english/español, modo claro/oscuro) -->
     <header>
-        <h1>Leo</h1>
+        <p>Leo</p>
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#formacion">Formacion</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#formacion">Mi formación</a></li>
+                <li><a href="#proyectos">Mis proyectos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
-                <li><button id="idioma">English/Español</button></li>
-                <li><button id="modo-oscuro">ModoClaro/ModoOscuro</button></li>
+                <li><button id="idioma" aria-label="Cambiar idioma">English/Español</button></li>
+                <li><button id="modo-oscuro" aria-label="Activar modo oscuro">ModoOscuro</button></li>
             </ul>
         </nav>
     </header>
     <!-- seccion inicio  bienvenidos a mi portfolio! -->
     <section id="inicio">
-        <h2>¡Bienvenido a mi portfolio!</h2>
-        <p> FRONTEND DEVELOPER.</p>
+        <h1>¡BIENVENIDO A MI PORTFOLIO!</h1>
+        <h2> Frontend Developer</h2>
         <p>Desarrollador Web de Rosario, Santa Fe, Argentina. Me especializo en desarrollo Front-end,
             con experiencia en la creación de interfaces de usuario eficientes y visualmente atractivas.</p>
     </section>
+
     <!-- seccion sobre mi. descripcion mia / link a cv /   -->
     <section id="sobre-mi">
         <h2>Sobre mí</h2>
@@ -41,13 +42,16 @@
             al siguiente nivel. Gracias por tomarte el tiempo de leer sobre mí. ¡Espero que pronto podamos trabajar
             juntos y crear soluciones
             memorables!</p>
-        <h2>A continuación te dejo mi link de LinkedIn para que puedas conocer más sobre mi trayectoria.</h2>
+        <h3>A continuación te dejo mi link de LinkedIn para que puedas conocer más sobre mi trayectoria.</h3>
         <p>Ahi encontrarás detalles acerca de mi formación, proyectos en los que he trabajado y habilidades que he
             desarrollado.</p>
+        <a href="https://www.linkedin.com/in/tu-linkedin" target="_blank">LinkedIn</a>
     </section>
+
     <!-- seccion formacion -->
     <section id="formacion">
-        <h2>Certificaciones</h2>
+        <h2>Mi formación</h2>
+        <h3>Mis certificaciones</h3>
         <p>En esta sección podrás ver mi formación académica y profesional, así como un panorama de mis conocimientos en
             diferentes tecnologías.</p>
         <h3>Selecciona una de mis certificaciones para verla en detalle:</h3>
@@ -76,7 +80,8 @@
     </section>
     <!-- seccion proyectos -->
     <section id="proyectos">
-        <h2>Proyectos</h2>
+        <h2>Mis proyectos</h2>
+        <h3>Proyectos destacados:</h3>
         <p>Acá irán tus proyectos destacados con links o imágenes.</p>
         <a href=""></a><!-- proyecto 1 -->
         <a href=""></a><!-- proyecto 2 -->
@@ -84,9 +89,11 @@
     </section>
     <!-- seccion contacto -->
     <section id="contacto">
-        <h2>Contacto</h2>
+        <h2>Contactactame!</h2>
         <p>Puedes contactarme en: <a href="mailto:tuemail@example.com">tuemail@example.com</a></p>
     </section>
+    <!-- boton para volver al inicio -->
+    <a href="#inicio" class="boton-volver" aria-label="Volver al inicio">Volver al inicio</a>
     <!-- seccion footer -->
     <footer>
         <p>&copy; 2025 Leo | <a href="https://www.linkedin.com/in/tu-linkedin" target="_blank">LinkedIn</a> | <a
@@ -94,4 +101,5 @@
     </footer>
 </body>
 <script src="index1.js"></script>
+
 </html>

@@ -13,7 +13,7 @@
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
 }
 
 /* Estilos para el header */
@@ -22,6 +22,7 @@ header {
     justify-content: space-between; /* Esto alinea los elementos extremos (h1 a la izquierda, nav a la derecha) */
     align-items: center;           /* Alinea los items verticalmente al centro */
     padding: 10px 20px;            /* Espaciado interior */
+    flex-wrap: wrap;  /* Esto ayudará a que el contenido no se desborde en pantallas más pequeñas */
 }
 /* Alineación de h1 a la izquierda */
 header h1 {
@@ -70,18 +71,21 @@ a:hover {
 button {
     background-color: var(--link-color);
     color: #fff;
+    font-size: 18px;
     border: none;
-    padding: 8px 16px;
+    padding: 10px 20px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
     background-color: #005fa3;
+    transform: scale(1.05); /* Agrega un pequeño efecto de escala */
 }
 
 .hidden {
     display: none;
+    opacity: 0;
     transition: opacity 0.3s ease;
 }
 #certificado1, #certificado2, #certificado3, #certificado4 {
@@ -90,4 +94,34 @@ button:hover {
 }
 #certificado1:not(.hidden), #certificado2:not(.hidden), #certificado3:not(.hidden), #certificado4:not(.hidden) {
     opacity: 1;
+    transform: translateY(0);
+}
+/* ------------------ boton volver */
+.boton-volver {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.boton-volver:hover {
+    background-color: #0056b3;
+}
+
+
+/* -------------------------------- MEDIA QUERIES */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    nav li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
 }
