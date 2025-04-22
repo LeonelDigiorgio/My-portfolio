@@ -10,6 +10,10 @@
     --link-color: #66aaff;
 }
 
+html {
+    scroll-behavior: smooth;  /* Hace que el desplazamiento sea suave */
+}
+
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -18,44 +22,65 @@ body {
 
 /* Estilos para el header */
 header {
-    display: flex;                /* Usamos Flexbox */
-    justify-content: space-between; /* Esto alinea los elementos extremos (h1 a la izquierda, nav a la derecha) */
-    align-items: center;           /* Alinea los items verticalmente al centro */
-    padding: 10px 20px;            /* Espaciado interior */
-    flex-wrap: wrap;  /* Esto ayudará a que el contenido no se desborde en pantallas más pequeñas */
+    display: flex;/* Usamos Flexbox */
+    justify-content: space-between;/* Esto alinea los elementos extremos (h1 a la izquierda, nav a la derecha) */
+    align-items: center;/* Alinea los items verticalmente al centro */
+    padding: 10px 20px;/* Espaciado interior */
+    flex-wrap: wrap;/* Esto ayudará a que el contenido no se desborde en pantallas más pequeñas */
+        position: fixed; /* Fija el nav en la parte superior */
+    top: 0; /* Colócalo en la parte superior de la página */
+    left: 0; /* Alineado a la izquierda */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    z-index: 1000; /* Asegura que el nav esté por encima de otros elementos */
 }
+
 /* Alineación de h1 a la izquierda */
 header h1 {
-    margin: 0;                     /* Eliminar márgenes por defecto */
+    margin: 0; /* Eliminar márgenes por defecto */
 }
+
 /* Estilos para el nav */
 nav {
-    display: flex;                   /* Usamos Flexbox en el nav también */
+    display: flex; /* Usamos Flexbox en el nav también */
 }
 
 nav ul {
-    display: flex;                   /* Lista en línea */
-    margin: 0;                        /* Eliminar margen por defecto */
-    padding: 0;                       /* Eliminar padding por defecto */
-    list-style: none;                 /* Eliminar los puntos de la lista */
+    display: flex;
+    /* Lista en línea */
+    margin: 0;
+    /* Eliminar margen por defecto */
+    padding: 0;
+    /* Eliminar padding por defecto */
+    list-style: none;
+    /* Eliminar los puntos de la lista */
 }
 
 nav li {
-    margin-left: 20px;               /* Espaciado entre los items */
+    margin-left: 20px;
+    /* Espaciado entre los items */
 }
 
-nav a, nav button {
-    text-decoration: none;           /* Eliminar subrayado en los links */
-    color: inherit;                  /* Hereda el color del texto */
-    background: none;                /* Eliminar el fondo de los botones */
-    border: none;                    /* Eliminar borde de los botones */
-    cursor: pointer;                 /* Cambiar el cursor a mano */
-    font-size: 16px;                  /* Tamaño de fuente de los botones */
+nav a,
+nav button {
+    text-decoration: none;
+    /* Eliminar subrayado en los links */
+    color: inherit;
+    /* Hereda el color del texto */
+    background: none;
+    /* Eliminar el fondo de los botones */
+    border: none;
+    /* Eliminar borde de los botones */
+    cursor: pointer;
+    /* Cambiar el cursor a mano */
+    font-size: 16px;
+    /* Tamaño de fuente de los botones */
 }
 
 /* Si es necesario, agregar efectos adicionales al pasar el mouse */
-nav a:hover, nav button:hover {
-    color: #005fa3;                  /* Cambia el color al pasar el mouse */
+nav a:hover,
+nav button:hover {
+    color: #005fa3;
+    /* Cambia el color al pasar el mouse */
 }
 
 
@@ -80,7 +105,8 @@ button {
 
 button:hover {
     background-color: #005fa3;
-    transform: scale(1.05); /* Agrega un pequeño efecto de escala */
+    transform: scale(1.05);
+    /* Agrega un pequeño efecto de escala */
 }
 
 .hidden {
@@ -88,15 +114,97 @@ button:hover {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
-#certificado1, #certificado2, #certificado3, #certificado4 {
+
+#certificado1,
+#certificado2,
+#certificado3,
+#certificado4 {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
-#certificado1:not(.hidden), #certificado2:not(.hidden), #certificado3:not(.hidden), #certificado4:not(.hidden) {
+
+#certificado1:not(.hidden),
+#certificado2:not(.hidden),
+#certificado3:not(.hidden),
+#certificado4:not(.hidden) {
     opacity: 1;
     transform: translateY(0);
 }
-/* ------------------ boton volver */
+
+
+/* ------------- foto presentacion */
+#foto-presentacion {
+    max-width: 100%; /* La imagen no será más grande que su contenedor */
+    max-height: 60px;/* Limita la altura máxima */
+    border-radius: 100px;
+    
+}
+/* ------------- seccion inicio */
+#inicio {
+    border: 1px solid #333;
+    padding: 2%;
+    margin: 10vw;
+
+    display: flex;            /* Aplica Flexbox al contenedor */
+    flex-direction: column;   /* Alinea los elementos en una columna */
+    justify-content: center;  /* Centra los elementos verticalmente */
+    align-items: center;      /* Centra los elementos horizontalmente */
+    height: 100vh;            /* Establece la altura al 100% de la vista */
+}
+/* ------------- seccion sobre-mi */
+#sobre-mi {
+    border: 1px solid #333;
+    padding: 2%;
+    margin: 10vw;
+
+    display: flex;            /* Aplica Flexbox al contenedor */
+    flex-direction: column;   /* Alinea los elementos en una columna */
+    justify-content: center;  /* Centra los elementos verticalmente */
+    align-items: center;      /* Centra los elementos horizontalmente */
+    height: 100vh;            /* Establece la altura al 100% de la vista */
+}
+/* ------------- seccion formacion */
+#formacion {
+    border: 1px solid #333;
+    padding: 2%;
+    margin: 10vw;
+
+    display: flex;            /* Aplica Flexbox al contenedor */
+    flex-direction: column;   /* Alinea los elementos en una columna */
+    justify-content: center;  /* Centra los elementos verticalmente */
+    align-items: center;      /* Centra los elementos horizontalmente */
+    height: 100vh;            /* Establece la altura al 100% de la vista */
+}
+/* ------------- seccion proyectos */
+#proyectos {
+    border: 1px solid #333;
+    padding: 2%;
+    margin: 10vw;
+
+    display: flex;            /* Aplica Flexbox al contenedor */
+    flex-direction: column;   /* Alinea los elementos en una columna */
+    justify-content: center;  /* Centra los elementos verticalmente */
+    align-items: center;      /* Centra los elementos horizontalmente */
+    height: 100vh;            /* Establece la altura al 100% de la vista */
+}
+/* ------------- seccion contacto */
+#contacto {
+    border: 1px solid #333;
+    padding: 2%;
+    margin: 10vw;
+
+    display: flex;            /* Aplica Flexbox al contenedor */
+    flex-direction: column;   /* Alinea los elementos en una columna */
+    justify-content: center;  /* Centra los elementos verticalmente */
+    align-items: center;      /* Centra los elementos horizontalmente */
+    height: 100vh;            /* Establece la altura al 100% de la vista */
+}
+/* ------------- seccion volver */
+#volver {
+    display: flex;              /* Activa Flexbox */
+    justify-content: center;    /* Centra el botón horizontalmente */
+    align-items: center;        /* Centra el botón verticalmente */
+}
 .boton-volver {
     padding: 10px 20px;
     background-color: #007BFF;
@@ -104,11 +212,17 @@ button:hover {
     text-align: center;
     border-radius: 5px;
     text-decoration: none;
+    border: 1px solid #333;
 }
+
 .boton-volver:hover {
     background-color: #0056b3;
 }
-
+footer {
+    display: flex;              /* Activa Flexbox */
+    justify-content: center;    /* Centra el botón horizontalmente */
+    align-items: center;  
+}
 
 /* -------------------------------- MEDIA QUERIES */
 @media (max-width: 768px) {
@@ -116,10 +230,12 @@ button:hover {
         flex-direction: column;
         align-items: flex-start;
     }
+
     nav ul {
         flex-direction: column;
         width: 100%;
     }
+
     nav li {
         margin-left: 0;
         margin-bottom: 10px;
